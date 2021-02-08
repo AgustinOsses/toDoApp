@@ -3,7 +3,7 @@
     <h1 class="title">{{ title }}</h1>
     <input
       v-model="task"
-      @keydown.enter="add()"
+      @keypress.enter="add()"
       class="input"
       type="text"
       maxlength="20"
