@@ -20,7 +20,7 @@
         </div>
 
         <button @click="remove(index)">
-          <img class="delete" src="../assets/images/trash.svg" alt="" />
+          <img class="delete" src="@/assets/images/trash.svg" alt="" />
         </button>
       </div>
     </div>
