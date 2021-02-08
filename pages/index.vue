@@ -137,6 +137,7 @@ input[type='checkbox'] {
 button {
   border: none;
   outline: none;
+  background: transparent;
 }
 
 @media screen and (min-width: 1025px) {
