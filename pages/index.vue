@@ -56,23 +56,11 @@ export default {
 <style lang="css">
 body {
   height: 100vh;
-  background: #bdc3c7; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to bottom,
-    #2c3e50,
-    #bdc3c7
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to bottom,
-    #2c3e50,
-    #bdc3c7
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #bdc3c7;
+  background: -webkit-linear-gradient(to bottom, #2c3e50, #bdc3c7);
+  background: linear-gradient(to bottom, #2c3e50, #bdc3c7);
   background-repeat: no-repeat;
-  /* background-image: url('../assets/images/trigo.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  background-attachment: fixed; */
+  background-attachment: fixed;
 }
 .lala::placeholder {
   width: 50px;
@@ -82,11 +70,11 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 2rem 0;
+  padding: 2rem 0;
 }
 
 .title {
-  color: #000;
+  color: #fff;
 }
 
 .input {
