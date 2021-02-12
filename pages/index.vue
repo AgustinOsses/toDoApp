@@ -11,7 +11,7 @@
     />
 
     <div v-for="(item, index) in tasklist" :key="index">
-      <div class="task-wrapper">
+      <div class="task-wrapper" :class="{ bgGray: index % 2 !== 0 }">
         <div class="ckeck-task">
           <input v-model.trim="item.check" type="checkbox" />
           <p class="task" :class="{ done: item.check }">
@@ -97,11 +97,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* flex-wrap: wrap; */
   width: 80vw;
   height: 5rem;
   color: #000;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: #fff;
   margin: 0.1rem;
   height: 4rem;
   border-radius: 5px;
@@ -139,6 +138,10 @@ button {
   border: none;
   outline: none;
   background: transparent;
+}
+
+.bgGray {
+  background-color: #dddddd;
 }
 
 @media screen and (min-width: 1025px) {
