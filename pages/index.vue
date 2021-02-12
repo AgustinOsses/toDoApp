@@ -13,7 +13,7 @@
     <div v-for="(item, index) in tasklist" :key="index">
       <div class="task-wrapper">
         <div class="ckeck-task">
-          <input v-model="item.check" type="checkbox" />
+          <input v-model.trim="item.check" type="checkbox" />
           <p class="task" :class="{ done: item.check }">
             {{ item.name }}
           </p>
@@ -39,7 +39,7 @@ export default {
 
   methods: {
     add() {
-      if (this.task !== '') {
+      if (this.task.trim().length > 0) {
         this.tasklist.push({ name: this.task, check: false })
         this.task = ''
       }
