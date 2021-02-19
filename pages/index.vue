@@ -11,7 +11,7 @@
     />
 
     <div v-for="(item, index) in tasklist" :key="index">
-      <div class="task-wrapper" :class="{ bgGray: index % 2 !== 0 }">
+      <div class="task-wrapper">
         <div class="ckeck-task">
           <input v-model.trim="item.check" type="checkbox" />
           <p class="task" :class="{ done: item.check }">
@@ -56,11 +56,7 @@ export default {
 <style lang="css">
 body {
   height: 100vh;
-  background: #bdc3c7;
-  background: -webkit-linear-gradient(to bottom, #2c3e50, #bdc3c7);
-  background: linear-gradient(to bottom, #2c3e50, #bdc3c7);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-color: #e0e5ec;
 }
 .lala::placeholder {
   width: 50px;
@@ -74,7 +70,7 @@ body {
 }
 
 .title {
-  color: #fff;
+  color: #000;
 }
 
 .input {
@@ -84,13 +80,13 @@ body {
   border-radius: 5px;
   border: none;
   margin: 1rem 2rem;
-  background: rgba(0, 0, 0, 0.5);
-  color: #fff;
+  background: #e0e5ec;
+  box-shadow: inset 5px 5px 10px #b8bcc2, inset -5px -5px 10px #ffffff;
   padding-left: 1rem;
   outline: none;
 }
 .input::placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: gray;
 }
 
 .task-wrapper {
@@ -98,12 +94,13 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 80vw;
-  height: 5rem;
+  height: 3.5rem;
   color: #000;
-  background-color: #fff;
-  margin: 0.1rem;
-  height: 4rem;
   border-radius: 5px;
+  background: #e0e5ec;
+  background: linear-gradient(145deg, #caced4, #f0f5fd);
+  box-shadow: 5px 5px 10px #b8bcc2, -5px -5px 10px #ffffff;
+  margin: 0.4rem;
   padding: 0 0.5rem;
 }
 
@@ -113,7 +110,11 @@ body {
 }
 
 .delete {
-  width: 25px;
+  width: 40px;
+  border-radius: 5px;
+  background: #e0e5ec;
+  box-shadow: 5px 5px 10px #b8bcc2, -5px -5px 10px #ffffff;
+  padding: 0.4rem;
 }
 
 .task {
@@ -152,7 +153,6 @@ button {
 
   .task-wrapper {
     width: 40vw;
-    height: 3rem;
   }
 }
 </style>
