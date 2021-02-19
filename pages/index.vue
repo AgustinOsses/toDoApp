@@ -117,6 +117,11 @@ body {
   padding: 0.4rem;
 }
 
+.delete:active {
+  background: linear-gradient(145deg, #caced4, #f0f5fd);
+  box-shadow: 5px 5px 10px #b8bcc2, -5px -5px 10px #ffffff;
+}
+
 .task {
   display: flex;
   flex-wrap: wrap;
